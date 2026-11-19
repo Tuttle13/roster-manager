@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:">
+  <title>Capture Roster</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="plain">
+  <main>
+    <h2>Install the Capture Roster bookmark</h2>
+    <p class="muted">Do this once in <b>Safari</b> on the iPad (not inside the home-screen app). Redo it only if you change your username settings or the app tells you the bookmark has been updated.</p>
+    <section class="panel">
+      <ol class="steps">
+        <li>Tap <b>Copy bookmark code</b> below.</li>
+        <li>Tap the <b>Share</b> button → <b>Add Bookmark</b>. Name it <b>Capture Roster</b>, save it in <b>Favourites</b>.</li>
+        <li>Open Bookmarks (book icon) → <b>Edit</b> → tap <b>Capture Roster</b>.</li>
+        <li>Clear the address field, paste, and tap <b>Done</b>.</li>
+      </ol>
+      <button class="btn primary" id="copy">Copy bookmark code</button>
+      <p id="msg" class="muted"></p>
+      <details><summary>Show code</summary><textarea id="code" rows="6" readonly></textarea></details>
+    </section>
+    <section class="panel">
+      <h3>Using it</h3>
+      <ul class="steps">
+        <li><b>On a login page:</b> tap it to fill in your username if Safari hasn't. Passwords come from Safari's Passwords.</li>
+        <li><b>On the roster page:</b> tap it, then <b>Copy</b>, then open Roster Manager → Capture → <b>Import from clipboard</b>.</li>
+      </ul>
+      <p class="muted">Usernames built into this copy: <span id="who"></span></p>
+    </section>
+  </main>
+  <script src="js/bookmarklet-code.js"></script>
+  <script src="js/bookmarklet-install.js"></script>
+</body>
+</html>
