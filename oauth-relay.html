@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'">
+  <meta name="referrer" content="no-referrer">
+  <title>Google connected – Roster Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="plain">
+  <main>
+    <h2 id="head">Connecting Google…</h2>
+    <p id="msg">Taking you back to Roster Manager in Home Assistant.</p>
+    <section class="panel" id="manual" hidden>
+      <p>If you aren't sent back automatically, open <b>Roster → Settings → Google account → Paste the code from the Google page</b>, then paste this:</p>
+      <textarea id="code" rows="3" readonly></textarea>
+      <button class="btn primary" id="copy">Copy</button>
+      <p class="muted" id="copied"></p>
+    </section>
+  </main>
+  <script src="js/oauth-relay.js"></script>
+</body>
+</html>

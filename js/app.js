@@ -506,7 +506,8 @@ async function applyPlan(c, btn) {
   $$('[data-remove]').forEach(x => { x.disabled = true; });
   const prog = $('#progress');
   const results = await G.executePlan(calendarId, plan, approved, (i, n, op) => {
-    prog.innerHTML = `<div class="bar"><span style="width:${n ? Math.round((i / n) * 100) : 100}%"></span></div><p class="muted">${op ? `${i + 1} of ${n}: ${esc(op.kind)} ${esc(op.label)}` : 'Calendar done.'}</p>`;
+    prog.innerHTML = `<div class="bar"><span></span></div><p class="muted">${op ? `${i + 1} of ${n}: ${esc(op.kind)} ${esc(op.label)}` : 'Calendar done.'}</p>`;
+    $('.bar span', prog).style.width = `${n ? Math.round((i / n) * 100) : 100}%`; // set via CSSOM: inline style attributes are blocked by the CSP
   });
   const failed = results.filter(r => !r.ok);
   const summary = {
